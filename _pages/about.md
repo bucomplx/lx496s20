@@ -5,21 +5,21 @@ permalink: /about/
 author_profile: true
 ---
 
-**NLP&CL, Spring 2019**
+**Computational Linguistics, Spring 2020**
 
-**(CAS LX 394, GRS LX 694)**
+**(CAS LX 496, GRS LX 796, MET LX 596)**
 
 _ | _
 ----: | ----
 **Meeting time** | M 2:30-5:15, CAS 229
-**Instructor** | Paul Hagstrom
+**Instructor** | Paul Hagstrom, Wayne Snyder
 **Email** | hagstrom@bu.edu
 **Phone** | (617) 353-6220
 **Office** | 621 Commonwealth Ave., Rm. 105
 **Office Hours** | M 1-2; TR 2-3 (and by appointment)
 
 
-**Prerequisite:** CAS LX250 (Introduction to Linguistics), or consent of instructor.
+**Prerequisite:** CAS LX250 and CAS CS 112 or consent of instructor.
 
 **Course Description:** Introduction to computational techniques to explore linguistic models and test empirical claims. Serves as an introduction to programming, algorithms, and data structures, focused on modern applications to NLP. Topics include tagging and classification, parsing models, meaning representation, and information extraction.
 

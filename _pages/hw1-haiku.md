@@ -1,14 +1,14 @@
 ---
 layout: single
 title: Haiku
-permalink: "/hw3-haiku/"
+permalink: "/hw1-haiku/"
 ---
 
 <div class="title-table clear-table center-table" markdown="1">
 
 | :--------    | :--:        | -:           |
-| CAS LX 394 / | NLP/CL      | Homework 3   |
-| GRS LX 694   | Spring 2019 | due Tue 2/19 |
+| CAS LX 496 / | NLP/CL      | Homework 1   |
+| GRS LX 706   | Spring 2020 | due Tue 2/19 |
 
 </div>
 

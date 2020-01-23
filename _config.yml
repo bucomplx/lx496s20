@@ -5,16 +5,18 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-theme                    : minimal-mistakes-jekyll
+#theme                    : minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
+
 minimal_mistakes_skin    : "air"
 # Site Settings
 locale                   : "en"
-title                    : "Topics: NLP&CL"
+title                    : "Computational Linguistics"
 title_separator          : "-"
-name                     : "Paul Hagstrom"
-description              : "Natural Language Processing and Computational Linguistics"
-url                      : "http://ling-blogs.bu.edu" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/lx394s19" # the subpath of your site, e.g. "/blog"
+name                     : "Paul Hagstrom, Wayne Snyder"
+description              : "Computational Linguistics"
+url                      : "https://bucomplx.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/lx496s20" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
