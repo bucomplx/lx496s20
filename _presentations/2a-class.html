@@ -1,0 +1,738 @@
+---
+layout: presentation
+title: Class 2a
+permalink: /class-2a/
+---
+name: title
+layout: true
+class: center, middle, inverse
+---
+# Characterizing texts
+
+---
+layout: false
+
+# FreqDist
+
+NLTK provides a couple of statistical tools to count things.  This can be useful in characterizing texts.
+
+(Again, point of all of this is that we're generally dealing with too much data to sensibly work with it by hand)
+
+Suppose that we want to know what the most common words are.
+
+```python
+>>> import nltk
+>>> from nltk.book import *
+>>> fdist4 = FreqDist(text4)
+>>> print(fdist4)
+<FreqDist with 9754 samples and 145735 outcomes>
+>>> fdist6.most_common(40)
+```
+
+This does what we want (presuming now that we wanted to do this), but there are some things to say.
+
+---
+layout: false
+
+# Capitalization
+
+One thing to notice is that there are 1141 instances of *we* and 483 instances of *We* --
+but it is almost certain that we don't care about that distinction.  What we want is to be
+told that there are 1624 instances of *we* regardless of capitalization.
+
+# Stopwords
+
+Also, the most common things are like *the* and *of* and *to* and it is almost guaranteed that
+these are not going to be interesting.  These are grammatical things.  It is possible that these
+could lead us to some kind of statistic that could characterize the text, but it's quite likely
+that these are not going to be interesting.
+
+---
+layout: false
+
+# Collapsing distinctions
+
+Recall that when we had a list like this, where repeats and order don't count, we could
+convert it to a set.  That's one way of collapsing distinctions.  Conceptually, counting
+the number of words in a (small) text, and the number of *distinct* words in a text.
+
+```python
+>>> list1 = ["The", "cook", "gave", "the", "panini", "to", "the", "butler"]
+>>> print(len(list1))
+8
+>>> print(set(list1))
+{'to', 'The', 'cook', 'butler', 'gave', 'the', 'panini'}
+>>> print(len(set(list1)))
+7
+```
+
+A problem here is that we still are distinguishing *the* and *The*.  The computer doesn't know
+that they're the same, they seem different to it.
+
+---
+layout: false
+
+# A list of lowercase words
+
+**Goal**: We want to convert a list of words (`list1`) into a list of words that contains
+only the lower-case versions of those words.  We want to collapse the distinction between
+*the* and *The* before we start counting things.
+
+That is, we want to go from:
+
+```python
+["The", "cook", "gave", "the", "panini", "to", "the", "butler"]
+```
+
+to
+
+
+```python
+["the", "cook", "gave", "the", "panini", "to", "the", "butler"]
+```
+
+The approach we will use (a lot) is to go through the original list, and make a list
+of lowercased versions of each word.  First, the way we can lowercase a word:
+
+```python
+>>> print("Hi".lower())
+'hi'
+```
+
+---
+layout: false
+
+# List comprehensions
+
+There is a pretty easy way to do this in Python, using *list comprehensions*.  These
+are super useful, we'll use them a lot.  The one that will get us what we are after is this:
+
+```python
+llist1 = [w.lower() for w in list1]
+```
+
+This does exactly what we said we wanted to do, but it's written out in a kind of
+backwards way.
+
+* The end result is a list, it's enclosed in `[` and `]`
+* Each member of the result list is based on a member of `list1` (called `w`)
+* The member of the result is derived by applying `lower()` to current `w`.
+* So, it's a list of lowercased `w` for each `w` in `llist1`
+
+There's no special requirement that you refer to the element, incidentally.
+
+```python
+>>> [1 for w in [5, 6, 7]]
+[1, 1, 1]
+```
+
+---
+layout: false
+
+So, now
+
+```python
+>>> llist1 = [w.lower() for w in list1]
+>>> print(llist1)
+['the', 'cook', 'gave', 'the', 'panini', 'to', 'the', 'butler']
+>>> print(set(llist1))
+{'to', 'cook', 'butler', 'gave', 'the', 'panini'}
+>>> print(len(set(llist1)))
+6
+```
+--
+While we're here, let's take a look at what `FreqDist` does.  It's counting the number of times something
+occurs in the list.  The frequency distribution.  Terminology is non-transparent, but we have 6 distinct
+words ("samples") having analyzed 8 words ("outcomes").
+
+```python
+>>> fd1 = FreqDist(llist1)
+>>> print(fd1)
+<FreqDist with 6 samples and 8 outcomes>
+>>> fd1
+FreqDist({'butler': 1, 'cook': 1, 'gave': 1, 'panini': 1, 'the': 3, 'to': 1})
+```
+--
+There is a hint here in the representation that you can find out the count for a particular word like this:
+
+```python
+>>> fd1['cook']
+1
+>>> fd1['the']
+3
+```
+
+---
+layout: false
+
+Ok, so now back to `text4`.  What we want to do is collapse the distinction between upper and lower case
+words in `text4` before we do a `FreqDist` calculation on it.
+
+`text4` can be treated as a list of words.
+
+```python
+>>> len(text4)
+145735
+>>> text4[10:12]
+['of', 'Representatives']
+```
+
+so...?
+
+--
+
+```python
+lower4 = [w.lower() for w in text4]
+fdistl4 = FreqDist(lower4)
+fdistl4.most_common(40)
+```
+
+*et voilà.*  One problem taken care of.
+
+---
+layout: false
+
+Let's play around a bit more with list comprehensions.
+
+```python
+>>> fdistl4['angry']
+2
+```
+
+So there are 2 instances of *angry* in `text4`.  What are the other things that there are 2 of?
+
+--
+
+What we want to do is make a list of all the things in `fdistl4` for which the value you get
+from the distribution is 2.
+
+--
+
+```python
+>>> twos = [w for w in fdistl4 if fdistl4[w] == 2]
+```
+
+How many did we find?
+
+--
+```python
+>>> len(twos)
+1407
+```
+What are the first 10?
+
+--
+```python
+>>> twos[0:10]
+['injunction', 'core', 'inconvenient', 'willingly', ..., 'uncontrollable']
+```
+
+---
+layout: false
+
+What words occur just once?
+
+--
+```python
+>>> ones = [w for w in fdistl4 if fdistl4[w] == 1]
+>>> len(ones)
+3712
+```
+
+--
+There's actually another way to get those built in to `FreqDist`.  These are
+"hapaxes" and we can get them like this as well:
+
+```python
+>>> len(fdistl4.hapaxes())
+3712
+>>> fdistl4.hapaxes()[0:10]
+['spasms', 'uncontrolled', ..., 'pitiful']
+>>> ones[0:10]
+['spasms', 'uncontrolled', ..., 'pitiful']
+```
+
+---
+layout: false
+
+# Conditionals
+
+```python
+>>> ones = [w for w in fdistl4 if fdistl4[w] == 1]
+```
+
+The `if` in there is new, though it works basically like it sunds like it would.
+If the thing after `if` is `True` then the element is included.  If it is `False` then
+the element is not included.
+
+Why `==`?  That means "is equal?" -- it is different from `=`, which means "be equal!"
+
+There are a couple of other things we can test for with words.
+
+```python
+>>> print("Hello".startswith("H"))
+True
+>>> print("Hello".islower())
+False
+>>> print("Hello".isupper())
+False
+>>> print("Hello".istitle())
+True
+>>> print("Hello".endswith("o"))
+True
+```
+
+---
+layout: false
+
+So:
+
+```python
+>>> print(set([w for w in text4 if w.endswith("nment")]))
+{'supergovernment', 'abandonment', 'discernment', 'assignment', 'government',
+ 'Abandonment', 'concernment', 'arraignment', 'Government', 'environment',
+ 'attainment'}
+```
+
+You can test for a word in a list or a letter in a string using `in`:
+
+```python
+>>> print('i' in 'team')
+False
+>>> print('fun' in 'funeral')
+True
+>>> print('one' in ['one', 'two', 'three'])
+True
+```
+
+You can also have multiple conditions, using `and` and `or` or `not`:
+
+```python
+>>> print("Hello".istitle() and "Hello".endswith("o"))
+True
+>>> print([w for w in [1, 2, 3, 4] if w not in [2, 4]])
+[1, 3]
+```
+
+--
+Returning to the question of characterizing the text, there are still a lot of *the* and *of* tokens in there.
+
+These are kind of "uninteresting."  Why?
+
+---
+layout: false
+
+Let's try to get a version of `text4` that doesn't have these uninteresting words in it.
+
+How can we tell if a word is interesting?  There's one easy approach we can try first.
+
+Here are some uninteresting words:
+`a`, `the`, `an`, `I`, `of`, `in`, `.`, `[`
+
+What do they have in common?
+
+--
+Well, they're short.  Suppose that there are not (m)any interesting words
+that are less than 4 letters long.  How then might we limit our word list to
+the relatively long words?
+
+```python
+>>> notshort4 = [w for w in lower4 if len(w) > 4]
+```
+
+Aside: what if we wanted to know how word length is distributed across the corpus?
+How many 4-letter words are there, 5-letter words, 6-letter words, etc.?
+
+--
+We have what we need to do this.  We want a list of word lengths, right?
+We want to find with what frequency each length occurs, right?
+
+--
+
+```python
+>>> wlengths = [len(w) for w in lower4]
+>>> wlfd = FreqDist(wlengths)
+>>> print(wlfd[4])
+18158
+```
+
+---
+layout: false
+
+# Visualization
+
+We can visualize the distribution of word lengths with the `plot()` function
+that `FreqDist` makes available:
+
+```python
+>>> wlfd.plot()
+```
+
+
+![fdistl4]({{ site.baseurl }}/assets/png/wlfd-plot.png)
+
+
+
+---
+layout: false
+
+
+You do want to be a bit cautious with this.  `wlfd` has only 17 things on the x-axis.
+But `fdistl4` has many more.
+
+```python
+>>> len(wlfd)
+17
+>>> len(fdistl4)
+9070
+```
+
+If we try to plot that, what is it going to plot?  Is it going to be interesting?
+It is going to be processor intensive and take a while.
+
+![fdistl4]({{ site.baseurl }}/assets/png/fdistl4-plot.png)
+
+
+---
+layout: false
+
+A couple more things we can do with `FreqDist`.
+
+```python
+>>> fdistl4['core']
+2
+>>> fdistl4.N()
+145735
+>>> len(fdistl4)
+9070
+>>> fdistl4.freq('core')
+1.3723539300785672e-05
+>>> print(2/145735)
+1.3723539300785672e-05
+>>> fdistl4.max()
+'the'
+>>> fdistl4.most_common(2)
+[('the', 9906), ('of', 6986)]
+>>> wlfd.tabulate()
+    3     2     4     1     5     6     7     8     9    10    11    12    13    14    15    16    17 
+28426 27111 18158 16269 12885 10604  9827  7168  5591  4690  2442  1411   615   399    79    50    10
+```
+
+Like with graphs, be cautious with `tabulate()`, since if the x-axis is huge, it is going to be useless.
+
+```python
+>>> wlfd.tabulate(4)
+    3     2     4     1 
+28426 27111 18158 16269 
+```
+
+The gory details are here: [FreqDist docs](http://www.nltk.org/api/nltk.html#nltk.probability.FreqDist)
+
+---
+layout: false
+
+Ok, where were we?  We were going to try to characterize the text with something
+that eliminated the uninteresting words.  We had gotten to this point.
+
+```python
+>>> notshort4 = [w for w in lower4 if len(w) > 4]
+```
+
+We can now create a `FreqDist` of these.
+
+
+```python
+>>> nsfd = FreqDist(notshort4)
+>>> print(nsfd)
+<FreqDist with 8185 samples and 55771 outcomes>
+>>> nsfd.most_common(20)
+[('which', 1002),
+ ('their', 738),
+ ('government', 593),
+...
+ ('power', 230),
+ ('public', 225)]
+```
+
+This is a bit more like it. But this is still really an approximation.
+We'd like it to be less of an approximation at least.  All we did is remove the
+"short" words, but we don't know for sure that "short" words are uninteresting,
+grammatical words.
+
+Enter the "stopwords"
+
+---
+layout: false
+
+# Stopwords
+
+```python
+>>> from nltk.corpus import stopwords
+>>> print(nltk.corpus.stopwords.fileids())
+['danish', 'dutch', 'english', 'finnish', 'french', 'german', 'hungarian',
+ 'italian', 'kazakh', 'norwegian', 'portuguese', 'russian', 'spanish',
+ 'swedish', 'turkish']
+>>> print(len(nltk.corpus.stopwords.words("English")))
+153
+>>> print(nltk.corpus.stopwords.words("English"))
+['i', 'me', 'my', ..., 'wouldn']
+```
+
+These are the words deemed *actually* uninteresting, not just short.
+
+For example, *ax* seems interesting.  But short.  And it is in our text.
+
+```python
+>>> print('ax' in lower4)
+True
+```
+
+So what we want is a list of words that are in `lower4` but not in
+our English stopwords.
+
+---
+layout: false
+
+# Removing the stopwords
+
+Let's define a shortcut first, we'll name the English stopwords.
+
+```python
+>>> sweng = nltk.corpus.stopwords.words("English")
+>>> print(len(sweng))
+153
+>>> print('the' in sweng)
+True
+>>> print('ax' in sweng)
+False
+```
+
+Let's start again with `text4` just so we don't lose track of what we're doing.
+We want to find all of the words in `text4` that are not in stopwords, but the
+stopwords are lowercase and we want to collapse case distinctions.
+
+```python
+>>> lower4 = [w.lower() for w in text4]
+>>> print(len(lower4))
+145735
+>>> nonsw = [w for w in lower4 if w not in sweng]
+>>> print(len(nonsw))
+76199
+```
+
+---
+layout: false
+
+Now we can do the `FreqDist` on just the interesting words.
+
+```python
+>>> nonswfd = FreqDist(nonsw)
+>>> print(nonswfd)
+<FreqDist with 8934 samples and 76199 outcomes>
+>>> nonswfd.most_common(20)
+[(',', 6840),
+ ('.', 4676),
+ ('government', 593),
+ ('people', 563),
+ (';', 544),
+ ...
+ ('one', 243)]
+```
+
+This is better.  But that punctuation does not seem like we want it there.
+It wasn't included in the stopwords.
+
+```python
+>>> print('.' in sweng)
+False
+```
+
+---
+layout: false
+
+Let's try one more time.  We could explicitly test for punctuation, or we
+could test for words of length 1.  There probably are no interesting words
+that are 1 character long, so length is probably safe.
+
+```python
+>>> nonsw1 = [w for w in lower4 if len(w) > 1 and w not in sweng]
+>>> print(len(nonsw1))
+63177
+```
+
+Or we could add punctuation to our filter.  If we can guess it all.
+
+```python
+>>> swengpunc = sweng + ['.', ',', '-', '?', '!', ';', '--']
+>>> print(len(sweng))
+153
+>>> print(leng(swengpunc))
+160
+>>> nonswpunc = [w for w in lower4 if len(w) > 1 and w not in swengpunc]
+>>> print(len(nonswpunc))
+62814
+```
+
+---
+layout: false
+
+The one where we filtered out 1-character words predictably left `--` in there.
+
+```python
+>>> nonsw1fd = FreqDist(nonsw1)
+>>> print(nonsw1fd)
+<FreqDist with 8907 samples and 63177 outcomes>
+>>> nonsw1fd.most_common(20)
+[('government', 593),
+ ('people', 563),
+ ('us', 455),
+ ('upon', 369),
+ ('--', 363),
+ ...
+ ('power', 230),
+ ('public', 225)]
+```
+
+The one where we included `--` as (essentially) a stopword filtered it out.
+
+```python
+>>> nonswpuncfd = FreqDist(nonswpunc)
+>>> print(nonswpuncfd)
+<FreqDist with 8906 samples and 62814 outcomes>
+>>> nonswpuncfd.most_common(20)
+[('government', 593),
+ ('people', 563),
+ ('us', 455),
+ ('upon', 369),
+ ('must', 346),
+ ...
+ ('power', 230),
+ ('public', 225),
+ ('would', 209)]
+ ```
+
+
+
+---
+layout: false
+
+# Code blocks, scripts
+
+First: instead of typing everything for immediate effect, it is possible to
+put the commands you want to use in a "script" file.  This is one of the windows
+in the Anaconda interface.  This is super useful, you can remember what you've
+done, you can replicate it, fix the middle of a complex sequence, share it with
+others.
+
+Second: it enables (more easily at least) more complex algorithms.
+
+We've done some iteration, like in the list comprehensions:
+
+```python
+>>> wordlist = [w.lower() for w in text1]
+```
+
+This iterates through the `text1` list and executes `w.lower()` for each `w`
+you can name in the list.
+
+---
+layout: false
+
+You can also iterate like this:
+
+```python
+for w in text1[0:10]:
+    if len(w) > 4:
+        print(w)
+    else:
+        print('Blah')
+print('All done.')
+```
+
+Important things to note: The `for` statement ends in a `:` that defines a block.
+Indenting lines define the extent of the block.  It will repeat everything in the indented part.
+Blocks are relevant for `for` loops like this, as well as for `if` conditionals.
+Conditional `if` can generally be paired with `else` (where one of the two is guaranteed to execute).
+There are more complexities as well, other ways to loop and test, but these are the basic ones.
+
+
+---
+layout: false
+
+# Functions
+
+As our problems get more involved, we will generally want to break larger problems up
+into smaller ones.  Also, it is good to be able to generalize solutions to use in a wider
+range of problems.  *Functions* provide a way to do this.
+
+For example: Suppose what we want to determine is how "diverse" a text is.
+That is, how many unique words there are as a proportion of the total number of words.
+
+```python
+>>> print(len(text1))
+260819
+>>> print(len(set(text1)))
+19317
+>>> print(19317/260819)
+0.07406285585022564
+```
+
+---
+layout: false 
+
+We can do this over and over for each text we want to do this with, but if we could
+create something like a Python "command" to automatically do this for a text, even better.
+This is what a function is (and actually, all of the NLTK stuff is basically made up of
+functions that the NLTK developers defined for us ahead of time).
+
+```python
+def lexical_diversity(text):
+    return len(set(text)) / len(text)
+```
+
+With that, we can do this:
+
+```python
+>>> print(lexical_diversity(text1))
+0.07406285585022564
+```
+
+Although you can define functions just fine at the command line, it's better as
+part of a script.  Easier to modify, etc.
+
+---
+layout: false
+
+This is so far not great, because we didn't collapse the case distinction.  We can amend
+our function to fix that.
+
+```python
+def lexical_diversity(text):
+    lowertext = [w.lower() for w in text]
+    return len(set(lowertext)) / len(lowertext)
+```
+
+Now, we get a slightly different answer.  One hope, more conceptually correct.
+
+```python
+>>> print(lexical_diversity(text1))
+0.06606497226045649
+```
+
+At this point, if we trust our work, we can just file that away.  That's our
+lexical diversity function, we can mostly forget about how it works and just use it
+in the same way we use `len` or `set` or whatever (so long as we have the code to
+define it in our script).
+
+When we use those `import` lines, it is defining a bunch of functions (essentially)
+that are stored in files that NLTK (or another Python library) mkes available.
+
+There's plenty more to say about functions, but we have to start somewhere.
+
+
+
+
+
+
+
+

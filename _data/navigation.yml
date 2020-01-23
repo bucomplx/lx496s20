@@ -1,0 +1,42 @@
+main:
+  - title: "Schedule"
+    url: /schedule/
+  - title: "Course Information"
+    url: /about/
+#  - title: "News"
+#    url: /
+  # - title: "Categories"
+  #   url: /categories/
+  # # - title: "Tags"
+  #   url: /tags/
+  # - title: "Pages"
+  #   url: /page-archive/
+  # - title: "Collections"
+  #   url: /collection-archive/
+  # - title: "External Link"
+  #   url: https://google.
+extranav:
+  - title: Resources
+    children:
+    - title: "NLTK"
+      url: http://nltk.org/
+  - title: Homework
+    children:
+    - title: "1-Begin"
+      url: /homework-1/
+    - title: "2-Continue"
+      url: /homework-2/
+    - title: "3-Haiku"
+      url: /hw3-haiku/
+    - title: "4-Trees"
+      url: /hw4-trees/
+    - title: "5-CHILDES"
+      url: /hw5-childes/
+    - title: "M-Midterm"
+      url: /midterms19/
+    - title: "6-Texts"
+      url: /hw6-texts/
+    - title: "7-Semantics"
+      url: /hw7-semantics/
+    - title: "8-SHRDLU"
+      url: /hw8-shrdlu/
