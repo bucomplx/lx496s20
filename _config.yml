@@ -95,9 +95,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "CAS LX 394<br/>GRS LX 694</br>Spring 2019"
+  name             : "CAS LX 496<br/>GRS LX 796</br>Spring 2020"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Topics:<br />NLP&CL"
+  bio              : "Computational Linguistics"
   location         : "Boston University"
   email            :
   uri              :

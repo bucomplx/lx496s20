@@ -9,139 +9,147 @@ order: 20
 
 This is the current view of how the semester will proceed, but the schedule *will* be adjusted from time to time.
 **Do not rely on the printed copy**; the truth is here:
-<http://ling-blogs.bu.edu/lx394s19/schedule/>.
+<https://bucomplx.github.io/lx496s20/schedule/>.
 Homework is due when the block ends in the schedule below; homework 1 is due on February 4.
 Chapters:sections refer to the NLTK book.
 
 <table>
     <tr>
-<th>Date</th>
+<th>Week</th>
 <th>Topic</th>
 <th>Reading</th>
 <th>Homework</th>
     </tr>
     <tr>
-<td>Jan 28</td>
-<td>Hello world</td>
-<td rowspan="1">1:1-2,5</td>
+<td>Jan 21</td>
+<td>Introduction to Python notebooks and online resources</td>
+<td rowspan="1">&mdash;</td>
 <td  markdown="1">
-HW 1
+Simple test suite
+</td>
+    </tr>
+    <tr>
+<td>Jan 28</td>
+<td rowspan="1" markdown="1">
+Corpora: WordNet, pronunciation
+</td>
+<td rowspan="1">NLTK 2</td>
+<td markdown="1">
+Poetry generator
 </td>
     </tr>
     <tr>
 <td>Feb 4</td>
 <td rowspan="1" markdown="1">
-Simple statistics, conditionals, corpora
-</td>
-<td rowspan="1">1:3-4; 2:1</td>
-<td markdown="1">
-HW 2
-</td>
-    </tr>
-    <tr>
-<td>Feb 11</td>
-<td rowspan="1" markdown="1">
-Frequency distributions, reusing code, lexical resources
+Tagging text
 </td>
 <td rowspan="1">3:2-5; 3:9</td>
 <td markdown="1">
-HW 3
+Tagging
 </td>
     </tr>
     <tr>
-<td colspan="1" style="background-color: #ffb;">FEB 19</td>
+<td colspan="1" style="background-color: #ffb;">Feb 11</td>
 <td rowspan="1" markdown="1">
-Parsing strings into syntactic structures
+Generating corpora, optimization
 </td>
 <td rowspan="1">8:1-3</td>
 <td markdown="1">
-HW 4
+News analysis
 </td>
     </tr>
     <tr>
 <td>Feb 25</td>
 <td rowspan="1" markdown="1">
-WordNet, CHILDES
+Grammars and parsing
 </td>
-<td>2:5</td>
+<td>NLTK 8</td>
 <td rowspan="1" markdown="1">
-HW 5
+English
 </td>
     </tr>
     <tr>
-<td>Mar 4</td>
+<td>Mar 3</td>
 <td rowspan="1" markdown="1">
-Text classification
+More advanced grammars
 </td>
-<td>6:1, 3, 7</td>
-<td style="background-color: #ddd"></td>
+<td>NLTK 9</td>
+<td>
+Acquisition
+</td>
     </tr>
     <tr>
-<td colspan="1" style="background-color: #ffb;">MAR 11</td>
+<td colspan="1" style="background-color: #ffb;">MAR 10</td>
 <td rowspan="1" style="background-color: #ffb;">Spring recess</td>
 <td colspan="1" style="background-color: #ffb;"></td>
 <td colspan="1" style="background-color: #ffb;"></td>
     </tr>
     <tr>
-<td>Mar 18</td>
+<td>Mar 17</td>
 <td rowspan="1" markdown="1">
-Python style, handling differing text formats
+Classification
 </td>
-<td>3:1-6; 4</td>
+<td>NLTK 6</td>
 <td rowspan="1" markdown="1">
-Midterm
+Authorship, Midterm
 </td>
     </tr>
     <tr>
-<td>Mar 25</td>
+<td>Mar 24</td>
 <td rowspan="1" markdown="1">
-Segmentation and tagging
+Processing audio signals
 </td>
-<td>3:7-; 5</td>
+<td>Course notes</td>
 <td markdown="1">
-HW 6
+Procssing, Project proposal
 </td>
     </tr>
     <tr>
-<td>Apr 1</td>
+<td>Mar 31</td>
 <td rowspan="1" markdown="1">
-Information extraction
+Interpreting audio data
 </td>
-<td>7:1-5</td>
+<td>Course notes</td>
 <td markdown="1">
---
+Interpreting audio
 </td>
     </tr>
     <tr>
 <td>Apr 8</td>
-<td>Developing grammars</td>
-<td>8:5-6, 9:1-3, 10:1-2</td>
+<td>
+Information extraction
+</td>
+<td>NLTK 7</td>
 <td markdown="1">
-HW 7
+Project methodology
 </td>
     </tr>
     <tr>
-<td colspan="1" style="background-color: #ffb;">APR 17</td>
-<td rowspan="1">Logic, semantics of English</td>
-<td>10:3-5</td>
+<td colspan="1" style="background-color: #ffb;">Apr 14</td>
+<td rowspan="1">
+Visualization
+</td>
+<td>Course notes</td>
 <td markdown="1">
-Project: corpus choice
+Visualization
 </td>
     </tr>
     <tr>
-<td>Apr 22</td>
+<td>Apr 21</td>
 <td  markdown="1">
-Creating and annotating corpora
+Analyzing semantics
 </td>
-<td>10:5; 11:1-6</td>
+<td>NLTK 10</td>
 <td markdown="1">
-HW 8
+SHRDLU
 </td>
     </tr>
     <tr>
-<td>Apr 29</td>
-<td>Basic statistics</td>
-<td>R manual sections</td>
-<td colspan="1" style="background-color: #ddd;"></td>
+<td>Apr 28</td>
+<td>Creating a public interface</td>
+<td>Course notes</td>
+<td colspan="1">
+Project
+</td>
     </tr>
 </table>

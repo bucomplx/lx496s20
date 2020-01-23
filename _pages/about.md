@@ -11,19 +11,19 @@ author_profile: true
 
 _ | _
 ----: | ----
-**Meeting time** | M 2:30-5:15, CAS 229
+**Meeting time** | T 3:30-6:15, EPIC 205
 **Instructor** | Paul Hagstrom, Wayne Snyder
-**Email** | hagstrom@bu.edu
-**Phone** | (617) 353-6220
-**Office** | 621 Commonwealth Ave., Rm. 105
-**Office Hours** | M 1-2; TR 2-3 (and by appointment)
+**Email** | hagstrom@bu.edu, Update
+**Phone** | (617) 353-6220, Update
+**Office** | 621 Commonwealth Ave., Rm. 105, Update
+**Office Hours** | Update
 
+**Course Description:** Introduction to computational techniques to explore linguistic models and test empirical claims. Serves as an introduction to algorithms, and data structures, and tool libraries. Topics include tagging and classification, parsing models, meaning representation, corpus creation, information extraction.
 
-**Prerequisite:** CAS LX250 and CAS CS 112 or consent of instructor.
+**Prerequisites:** CAS LX 250 (Introduction to Linguistics), CAS CS 112 (Update)
+**Antiprerequisites** CAS LX 394/GRS LX 694.
 
-**Course Description:** Introduction to computational techniques to explore linguistic models and test empirical claims. Serves as an introduction to programming, algorithms, and data structures, focused on modern applications to NLP. Topics include tagging and classification, parsing models, meaning representation, and information extraction.
-
-**Course Synopsis:** The quantity of language data available for natural language analysis has greatly increased in recent years, as has computing power and tool development. Doing large-scale language analysis to address theoretical issues in Linguistics is now within reach, and interest in natural language processing is similarly increasing for use in human-computer interfaces in industry. The purpose of this course is to gain facility with some of the powerful language analysis tools that are available for doing these kinds of large-scale analyses and to become familiar with the types of problems they are best suited to address. The course introduces basic programming concepts alongside the use of a natural language toolkit that allows characterizing and classifying texts, parsing syntactic structure, extracting and modeling information, processing basic logical relations, and basic natural language understanding. By the end of the course, students should have the background, and confidence, to use these techniques in addressing further linguistic questions that may arise beyond the class. The projects in the class will consist of some basic programming exercises, some mini-projects (generating poetry, determining authorship, development of child English), and a more extensive final project proposing a problem to investigate, a method for studying it, and a written paper reporting the results and implications.
+**Course Synopsis:** The quantity of language data available for natural language analysis has greatly increased in recent years, as has computing power and tool development. Doing large-scale language analysis to address theoretical issues in Linguistics is now within reach, and interest in natural language processing is similarly increasing for use in human-computer interfaces in industry. The purpose of this course is to gain facility with some of the powerful language analysis tools that are available for doing these kinds of large-scale analyses and to become familiar with the types of problems they are best suited to address. The course introduces the concepts and interfaces to some natural language toolkits that allow for characterizing and classifying texts, parsing syntactic structure, extracting and modeling information, processing basic logical relations, and basic natural language understanding. By the end of the course, students should have the background, and confidence, to use these techniques in addressing further linguistic questions that may arise beyond the class. The projects in the class will consist of some basic programming exercises, some mini-projects (generating poetry, determining authorship, development of child English), and a more extensive final project proposing a problem to investigate, a method for studying it, and a written paper reporting the results and implications.
 
 ## Learning objectives ##
 
