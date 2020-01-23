@@ -25,7 +25,7 @@ Chapters:sections refer to the NLTK book.
 <td>Hello world</td>
 <td rowspan="1">1:1-2,5</td>
 <td  markdown="1">
-[HW 1]({{ site.baseurl }}{% post_url 2019-01-29-homework-1 %})
+HW 1
 </td>
     </tr>
     <tr>
@@ -35,7 +35,7 @@ Simple statistics, conditionals, corpora
 </td>
 <td rowspan="1">1:3-4; 2:1</td>
 <td markdown="1">
-[HW 2]({{ site.baseurl }}{% post_url 2019-02-04-homework-2 %})
+HW 2
 </td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@ Frequency distributions, reusing code, lexical resources
 </td>
 <td rowspan="1">3:2-5; 3:9</td>
 <td markdown="1">
-[HW 3]({{ site.baseurl }}/hw3-haiku/) (Haiku)
+HW 3
 </td>
     </tr>
     <tr>
@@ -55,7 +55,7 @@ Parsing strings into syntactic structures
 </td>
 <td rowspan="1">8:1-3</td>
 <td markdown="1">
-[HW 4]({{ site.baseurl }}/hw4-trees/) (Trees)
+HW 4
 </td>
     </tr>
     <tr>
@@ -65,7 +65,7 @@ WordNet, CHILDES
 </td>
 <td>2:5</td>
 <td rowspan="1" markdown="1">
-[HW 5]({{ site.baseurl }}/hw5-childes/) (CHILDES part 1)
+HW 5
 </td>
     </tr>
     <tr>
@@ -89,7 +89,7 @@ Python style, handling differing text formats
 </td>
 <td>3:1-6; 4</td>
 <td rowspan="1" markdown="1">
-[Midterm]({{ site.baseurl }}/midterms19/)
+Midterm
 </td>
     </tr>
     <tr>
@@ -99,7 +99,7 @@ Segmentation and tagging
 </td>
 <td>3:7-; 5</td>
 <td markdown="1">
-[HW 6]({{ site.baseurl }}/hw6-texts/)
+HW 6
 </td>
     </tr>
     <tr>
@@ -117,7 +117,7 @@ Information extraction
 <td>Developing grammars</td>
 <td>8:5-6, 9:1-3, 10:1-2</td>
 <td markdown="1">
-[HW 7]({{ site.baseurl }}/hw7-semantics/)
+HW 7
 </td>
     </tr>
     <tr>
@@ -125,7 +125,7 @@ Information extraction
 <td rowspan="1">Logic, semantics of English</td>
 <td>10:3-5</td>
 <td markdown="1">
-[Project: corpus choice]({{ site.baseurl }}{% post_url 2019-04-19-project-specs %})
+Project: corpus choice
 </td>
     </tr>
     <tr>
@@ -135,7 +135,7 @@ Creating and annotating corpora
 </td>
 <td>10:5; 11:1-6</td>
 <td markdown="1">
-[HW 8]({{ site.baseurl }}/hw8-shrdlu/) (SHRDLU)
+HW 8
 </td>
     </tr>
     <tr>

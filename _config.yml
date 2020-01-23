@@ -7,18 +7,32 @@
 
 #theme                    : minimal-mistakes-jekyll
 remote_theme: mmistakes/minimal-mistakes
+# I believe this is needed to work locally.
+github: [metadata]
 
-minimal_mistakes_skin    : "air"
-# Site Settings
-locale                   : "en"
 title                    : "Computational Linguistics"
-title_separator          : "-"
+#email:
+#title_separator          : "-"
+#locale                   : "en"
+#twitter_username: username
+#github_username: username
+description              : >- #ignore newlines for a while
+  Computational Linguistics
+minimal_mistakes_skin    : "air"
+search: true
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Site Settings
 name                     : "Paul Hagstrom, Wayne Snyder"
-description              : "Computational Linguistics"
 url                      : "https://bucomplx.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/lx496s20" # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+#repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+#teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -57,13 +71,13 @@ bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
-# Social Sharing
-twitter:
-  username               :
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
+## Social Sharing
+#twitter:
+#  username               :
+#facebook:
+#  username               :
+#  app_id                 :
+#  publisher              :
 og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -172,16 +186,9 @@ kramdown:
 
 
 # Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+#sass:
+#  sass_dir: _sass
+#  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Plugins
@@ -194,13 +201,13 @@ plugins:
   - jekyll-archives
   - jekyll-include-cache
 
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
+## mimic GitHub Pages with --safe
+#whitelist:
+#  - jekyll-paginate
+#  - jekyll-sitemap
+#  - jekyll-gist
+#  - jekyll-feed
+#  - jemoji
 
 
 # Archives
