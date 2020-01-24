@@ -7,10 +7,14 @@ author_profile: false
 order: 20
 ---
 
+**NOTE** This needs to be double-checked, and will be shortly.
+Though it will also change during the semester.
+
+
 This is the current view of how the semester will proceed, but the schedule *will* be adjusted from time to time.
 **Do not rely on the printed copy**; the truth is here:
 <https://bucomplx.github.io/lx496s20/schedule/>.
-Homework is due when the block ends in the schedule below; homework 1 is due on February 4.
+Homework is due when the block ends in the schedule below; homework 1 is due on January 28.
 Chapters:sections refer to the NLTK book.
 
 <table>
