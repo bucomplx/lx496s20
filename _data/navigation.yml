@@ -3,6 +3,8 @@ main:
     url: /schedule/
   - title: "Course Information"
     url: /about/
+  - title: "Readings"
+    url: /readings/
 #  - title: "News"
 #    url: /
   # - title: "Categories"
@@ -22,8 +24,8 @@ extranav:
       url: http://nltk.org/
   - title: Homework
     children:
-#    - title: "1-Begin"
-#      url: /homework-1/
+#    - title: "1-Haiku"
+#      url: /assets/ipynb/hw00.ipynb
 #    - title: "2-Continue"
 #      url: /homework-2/
 #    - title: "1-Haiku"

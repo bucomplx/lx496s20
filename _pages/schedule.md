@@ -14,7 +14,7 @@ Though it will also change during the semester.
 This is the current view of how the semester will proceed, but the schedule *will* be adjusted from time to time.
 **Do not rely on the printed copy**; the truth is here:
 <https://bucomplx.github.io/lx496s20/schedule/>.
-Homework is due when the block ends in the schedule below; homework 1 is due on January 28.
+Homework is due when the block ends in the schedule below; homework 0 is due on January 28.
 Chapters:sections refer to the NLTK book.
 
 <table>
@@ -29,7 +29,7 @@ Chapters:sections refer to the NLTK book.
 <td>Introduction to Python notebooks and online resources</td>
 <td rowspan="1">&mdash;</td>
 <td  markdown="1">
-Simple test suite
+[Haiku]({{ site.baseurl }}{% post_url 2020-01-25-homework-0-posted %})
 </td>
     </tr>
     <tr>
