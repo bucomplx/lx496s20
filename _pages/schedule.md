@@ -35,51 +35,61 @@ Chapters:sections refer to the NLTK book.
     <tr>
 <td>Jan 28</td>
 <td rowspan="1" markdown="1">
-Corpora: WordNet, pronunciation
+Grammars and parsing
 </td>
-<td rowspan="1">NLTK 2</td>
+<td rowspan="1">NLTK 8</td>
 <td markdown="1">
-Poetry generator
+[Trees]({{ site.baseurl }}{% post_url 2020-01-31-homework-1-posted %})
 </td>
     </tr>
     <tr>
 <td>Feb 4</td>
 <td rowspan="1" markdown="1">
-Tagging text
+Analyzing semantics
 </td>
-<td rowspan="1">3:2-5; 3:9</td>
+<td rowspan="1">NLTK 10</td>
 <td markdown="1">
-Tagging
+Semantic parsing
 </td>
     </tr>
     <tr>
-<td colspan="1" style="background-color: #ffb;">Feb 11</td>
+<td colspan="1">Feb 11</td>
 <td rowspan="1" markdown="1">
-Generating corpora, optimization
+Dialog systems
 </td>
-<td rowspan="1">8:1-3</td>
+<td rowspan="1">Course notes</td>
 <td markdown="1">
-News analysis
+SHRDLU
 </td>
+    </tr>
+    <tr>
+<td colspan="1" style="background-color: #ffb;">FEB 18</td>
+<td rowspan="1" style="background-color: #ffb;">No class this week</td>
+<td colspan="1" style="background-color: #ffb;"></td>
+<td colspan="1" style="background-color: #ffb;"></td>
     </tr>
     <tr>
 <td>Feb 25</td>
 <td rowspan="1" markdown="1">
-Grammars and parsing
+Characterizing texts,
+generating corpora
 </td>
-<td>NLTK 8</td>
+<td>...</td>
 <td rowspan="1" markdown="1">
-English
+Authorship
 </td>
     </tr>
     <tr>
 <td>Mar 3</td>
 <td rowspan="1" markdown="1">
-More advanced grammars
+Tagging text,
+classification,
+(acquisition?)
 </td>
-<td>NLTK 9</td>
+<td>NLTK
+3:2-5; 3:9</td>
 <td>
-Acquisition
+Classification
 </td>
     </tr>
     <tr>
@@ -91,11 +101,11 @@ Acquisition
     <tr>
 <td>Mar 17</td>
 <td rowspan="1" markdown="1">
-Classification
+TBA
 </td>
-<td>NLTK 6</td>
+<td>...</td>
 <td rowspan="1" markdown="1">
-Authorship, Midterm
+Midterm
 </td>
     </tr>
     <tr>
@@ -105,7 +115,7 @@ Processing audio signals
 </td>
 <td>Course notes</td>
 <td markdown="1">
-Procssing, Project proposal
+Processing, Project proposal
 </td>
     </tr>
     <tr>
@@ -125,6 +135,7 @@ Information extraction
 </td>
 <td>NLTK 7</td>
 <td markdown="1">
+News analysis,
 Project methodology
 </td>
     </tr>
@@ -141,11 +152,11 @@ Visualization
     <tr>
 <td>Apr 21</td>
 <td  markdown="1">
-Analyzing semantics
+TBA
 </td>
-<td>NLTK 10</td>
+<td>TBA</td>
 <td markdown="1">
-SHRDLU
+TBA
 </td>
     </tr>
     <tr>
