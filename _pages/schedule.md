@@ -140,7 +140,7 @@ Project methodology
 </td>
     </tr>
     <tr>
-<td colspan="1" style="background-color: #ffb;">Apr 14</td>
+<td colspan="1">Apr 14</td>
 <td rowspan="1">
 Visualization
 </td>
