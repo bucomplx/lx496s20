@@ -49,7 +49,7 @@ Analyzing semantics
 </td>
 <td rowspan="1">NLTK 10</td>
 <td markdown="1">
-Semantic parsing
+[Semantic parsing]({{ site.baseurl }}{% post_url 2020-02-06-third-homework-posted %})
 </td>
     </tr>
     <tr>
