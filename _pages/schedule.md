@@ -47,7 +47,7 @@ Grammars and parsing
 <td rowspan="1" markdown="1">
 Analyzing semantics
 </td>
-<td rowspan="1">NLTK 10</td>
+<td rowspan="1">NLTK 9-10</td>
 <td markdown="1">
 [Semantic parsing]({{ site.baseurl }}{% post_url 2020-02-06-third-homework-posted %})
 </td>
