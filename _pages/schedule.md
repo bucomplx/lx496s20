@@ -59,7 +59,7 @@ Dialog systems
 </td>
 <td rowspan="1">Course notes</td>
 <td markdown="1">
-SHRDLU
+[SHRDLU]({{ site.baseurl }}{% post_url 2020-02-19-fourth-homework-posted %})
 </td>
     </tr>
     <tr>
