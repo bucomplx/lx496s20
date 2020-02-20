@@ -8,10 +8,10 @@ The fourth homework assignment
 (part two of two whose end goal is to model the SHRDLU
 conversational robot) is finally ready.
 You can download it here:
-[hw03-shrdlu.ipynb]({{ site.baseurl }}/assets/ipynb/[hw03-shrdlu.ipynb)
+[hw03-shrdlu.ipynb]({{ site.baseurl }}/assets/ipynb/hw03-shrdlu.ipynb)
 
 Or as a zip file:
-[hw03-shrdlu.ipynb.zip]({{ site.baseurl }}/assets/ipynb/[hw03-shrdlu.ipynb.zip)
+[hw03-shrdlu.ipynb.zip]({{ site.baseurl }}/assets/ipynb/hw03-shrdlu.ipynb.zip)
 
 This too is long, but like the previous one it is a lot of
 reading and absorbing with just occasional checks to make sure
